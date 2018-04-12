@@ -1,0 +1,11 @@
+.InfoTitlePhoto-container {
+  border-radius: $infocard-titlephoto-radius;
+  box-shadow: $infocard-titlephoto-shadow;
+  background: linear-gradient(60deg, #ffa726, #fb8c00); // this should be function !!!
+  display: inline-flex;
+
+  i {
+    color: white;
+    margin: auto auto;
+    }
+}

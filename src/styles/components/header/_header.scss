@@ -1,0 +1,69 @@
+.header-navbar-container{
+  height: 71px;
+  
+  .header-leftside {
+    float: left;
+    overflow: hidden;
+    height: 71px;
+    line-height: 71px;
+    margin-left: 15px;
+    vertical-align: middle;
+
+    .header-expandsidebar-container {
+      float: left;
+      overflow: hidden;
+      margin-right: 20px;
+    }
+
+    .header-title-container {
+      float: left;
+      
+      p {
+        font-size: 18px;
+        font-weight: 300;
+        margin: 0px;
+        margin-top: -3px;
+        color:$font-color;
+      }
+    }
+  }
+
+  .header-rightside {
+    float:right;
+    overflow: hidden;
+    line-height: 71px;
+    vertical-align: middle;
+
+    i {
+      font-size: 20px;
+    }
+    
+    .header-searching,.headerDashboard-buttons-container,.header-alert-buttons, .header-userprofile{
+      float: right;
+      overflow: hidden;
+    }
+
+    .headerDashboard-buttons-container,.header-alert-buttons, .header-userprofile {
+      margin-right: 30px;
+    }
+
+    .header-searching {
+      line-height: 71px;
+      margin-right: 15px;
+      input {
+        height: 38px;
+        margin-top: 12px;
+        background-color: $background-grey;
+        text-decoration: none;
+        border: none;
+        border-bottom: 1px solid gray; 
+        margin-right: 2px;
+      }
+    }
+
+    .header-search-buttons-container {
+      float: right;
+      overflow: hidden;
+    }
+  }
+}

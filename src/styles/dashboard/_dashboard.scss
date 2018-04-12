@@ -1,0 +1,47 @@
+.dashboard-container {
+  height: 100%;
+  overflow: scroll;
+  margin-right: 15px;
+}
+
+// first row
+.dashboard-firstrow {
+  width: 100%;
+  height: 187px;
+  margin-bottom: 30px;
+  position: relative;
+  .dashboard-infocard-area {
+    position: absolute;
+    bottom: 0px;
+    height: 128px;
+    width: 100%;
+    .dashboard-infocard-container {
+      width: 25%;
+      float: left;
+      padding-left: 15px;
+      padding-right: 15px; 
+    }
+  }
+}
+
+
+// second row 
+.dashboard-secondrow {
+  width: 100%;
+  height: 392px;
+  margin-bottom: 30px;
+  position: relative;
+
+  .dashboard-globalsales-area {
+    position: absolute;
+    height: 372px;
+    bottom: 0px;
+
+    width: 100%;
+
+    .dashboard-globalsales-container {
+      padding-left: 15px;
+      padding-right: 15px; 
+    }
+  }
+}

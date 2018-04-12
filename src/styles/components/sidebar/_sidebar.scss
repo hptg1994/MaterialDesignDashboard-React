@@ -1,0 +1,107 @@
+.sidebar {
+  width: 260px;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  background-color: darkgray;
+}
+
+.WebPage-title-icon-container {
+  height: 70px;
+  width: 100%;
+  display: inline-flex;
+  position: relative;
+  &::after {
+    content: "";
+    background: black;
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 0;
+    height: 2px;
+  }
+
+  .MainLogo {
+    width: 40px;
+    float: left;
+    overflow: hidden;
+    margin: auto 0;
+    margin-left: 10px;
+  }
+
+  .MainTitle-container {
+    float: left;
+    overflow: hidden;
+    margin: auto 0;
+
+    p {
+      font-weight: 400;
+      font-size: 18px;
+      color: white;
+      margin: 0px;
+    }
+  }
+}
+
+// User Profile
+.user-profile-container {
+  position: relative;
+  &:hover{
+    cursor: pointer;
+  }
+
+  &::after {
+    content: "";
+    background: black;
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 0;
+    height: 2px;
+  }
+  nav {
+    .navbar-collapse {
+      li {
+        height: 41px;
+      }
+    }
+  }
+  
+}
+
+.user-info-container {
+  margin-top: 13px;
+  margin-bottom: 13px;
+  width: 100%;
+  .user-profile-image {
+    width: 34px;
+    height: 34px;
+    float: left;
+    overflow: hidden;
+    margin-right: 10px;
+    img {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background-color: sandybrown;
+    }
+  }
+
+  .user-profile-name {
+    float: left;
+    overflow: hidden;
+    line-height: 34px;
+    vertical-align: middle;
+    margin: 0px auto;
+    p {
+      margin: 0px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+  }
+}
+
+// sidebar content container
+.sidebarcontent-container {
+  margin-top:27px;
+}

@@ -1,0 +1,43 @@
+.sidebarContent-container {
+  width:100%; 
+
+  margin-bottom: 10px;
+  p {
+    margin:0px;
+    color: white;
+  }
+
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.sidebar-title-icon-container {
+  height: 100%;
+  display: inline-flex;
+  color: white;
+  
+  .materialicons-container {
+    float: left;
+    overflow: hidden;
+    margin:auto auto;
+    height: 24px;
+    width: 24px;
+    margin-right: 20px;
+  }
+
+  .sidebar-title-container {
+    float: left;
+    overflow: hidden;
+    margin: auto auto;
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+}
+
+.sidebarcontent-detail {
+  font-size: 14px;
+  color: white;
+}
+

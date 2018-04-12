@@ -1,0 +1,38 @@
+.InfoCard-container {
+  background-color: white;
+  box-shadow: $Infocard-shadow;
+  border-radius: $infocard-radius;
+  position: relative;
+
+  .infoCard-TitlePhoto-Container {
+    position: absolute;
+    top: -20px;
+    left: 15px;
+  }
+
+  .infoCard-main {
+    position: relative;
+    &::after {
+      content: "";
+      background: $text-light-grey;
+      position: absolute;
+      left: 15px;
+      right: 15px;
+      bottom: 0px;
+      height: 1px;
+    }
+    // border-bottom: 1px solid $text-light-grey;
+  }
+}
+
+@media (max-width: 1200px) {
+  .col-lg-6 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 100%;
+  }
+  .InfoCard-container {
+    margin-bottom: 50px;
+  }
+}
