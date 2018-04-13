@@ -15,7 +15,7 @@
     bottom: 0px;
     height: 128px;
     width: 100%;
-    .dashboard-infocard-container {
+    .dashboard-infocard-4-container {
       width: 25%;
       float: left;
       padding-left: 15px;
@@ -36,10 +36,32 @@
     position: absolute;
     height: 372px;
     bottom: 0px;
-
     width: 100%;
 
     .dashboard-globalsales-container {
+      padding-left: 15px;
+      padding-right: 15px; 
+    }
+  }
+}
+
+// Analysis Data
+
+.dashboard-analysisdata-container {
+  margin-bottom: 30px;
+  height: 282px;
+  width: 100%;
+  position: relative;
+
+  .dashboard-analysisdata-area {
+    position: absolute;
+    height: 252px;
+    bottom: 0px;
+    width: 100%;
+    .dashboard-infocard-3-container {
+      width: 33.3%;
+      height: inherit;
+      float: left;
       padding-left: 15px;
       padding-right: 15px; 
     }

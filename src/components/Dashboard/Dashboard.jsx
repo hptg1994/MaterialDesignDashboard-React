@@ -13,20 +13,21 @@ class Dashboard extends Component {
       <div className="dashboardpage-container">
         <div className="dashboard-firstrow">
           <div className="dashboard-infocard-area">
-            <div className="dashboard-infocard-container">
+            <div className="dashboard-infocard-4-container">
               <InfoCard type="space" />
             </div>
-            <div className="dashboard-infocard-container">
+            <div className="dashboard-infocard-4-container">
               <InfoCard type="github" />
             </div>
-            <div className="dashboard-infocard-container">
+            <div className="dashboard-infocard-4-container">
               <InfoCard type="revenue" />
             </div>
-            <div className="dashboard-infocard-container">
+            <div className="dashboard-infocard-4-container">
               <InfoCard type="followers" />
             </div>
           </div>
         </div>
+
         <div className="dashboard-secondrow">
           <div className = 'dashboard-globalsales-area'>
             <div className="dashboard-globalsales-container">
@@ -34,6 +35,21 @@ class Dashboard extends Component {
             </div>
           </div>
         </div>
+
+        <section className = 'dashboard-analysisdata-container'>
+          <div className="dashboard-analysisdata-area">
+            <div className = 'dashboard-infocard-3-container'>
+              <InfoCard type = 'analysis-dailysales' />
+            </div>
+            <div className = 'dashboard-infocard-3-container'>
+              <InfoCard type = 'analysis-emailsubsciptions' />
+            </div>
+            <div className = 'dashboard-infocard-3-container'>
+              <InfoCard type = 'analysis-completedtasks' />
+            </div>
+          </div>
+        </section>
+
       </div>
     );
   };

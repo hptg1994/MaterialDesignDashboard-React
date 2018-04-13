@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import InfoTitlePhoto from "./InfoTitlePhoto";
+import InfoTitleArea from "./InfoTitleArea";
 
 class InfoCard extends Component {
   constructor(props) {
@@ -8,6 +8,7 @@ class InfoCard extends Component {
     this.icons = [];
     this.height = '';
     this.size = '';
+    this.
   }
 
   componentWillMount(){
@@ -41,6 +42,14 @@ class InfoCard extends Component {
         this.height = '372px';
         this.size = '63px';
         break;
+      case 'analysis-dailysales':
+      case 'analysis-emailsubsciptions':
+      case 'analysis-completedtasks':
+        this.height = '262px';
+        this.marginLR = '15px';
+        this.size = '63px';
+        break;
+
       default:
         break;
     }
@@ -49,7 +58,7 @@ class InfoCard extends Component {
     return (
       <div className = 'InfoCard-container' style = {{ height: this.height }}>
         <div className = 'infoCard-TitlePhoto-Container'>
-          <InfoTitlePhoto icon = {this.icons[0]} size = {this.size}/>
+          <InfoTitleArea icon = {this.icons[0]} size = {this.size} chartType = ''/>
         </div>
         <div className = 'infoCard-main' style = {{ height: '71%' }}> 
         </div>
