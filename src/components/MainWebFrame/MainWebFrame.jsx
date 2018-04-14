@@ -3,6 +3,7 @@ import SidebarContent from "../Buttons/SidebarContent";
 import UserProfile from '../SidebarItems/UserProfile';
 import HeaderNavbar from '../Header/HeaderNavbar';
 import Dashboard from '../Dashboard/Dashboard';
+import Footer from '../Dashboard/Footer';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from "reactstrap";
 
 class MainWebFrame extends Component {
@@ -28,6 +29,7 @@ class MainWebFrame extends Component {
         <div className = 'main-area'>
           <HeaderNavbar />
           <Dashboard />
+          <Footer />
         </div>
       </div>
     );

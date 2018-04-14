@@ -1,6 +1,4 @@
 .dashboard-container {
-  height: 100%;
-  overflow: scroll;
   margin-right: 15px;
 }
 
@@ -55,7 +53,30 @@
 
   .dashboard-analysisdata-area {
     position: absolute;
-    height: 252px;
+    height: 262px;
+    bottom: 0px;
+    width: 100%;
+    .dashboard-infocard-3-container {
+      width: 33.3%;
+      height: inherit;
+      float: left;
+      padding-left: 15px;
+      padding-right: 15px; 
+    }
+  }
+}
+
+// Mange Listing 
+
+.dashboard-manageListings-container {
+  margin-bottom: 30px;
+  height: 440px;
+  width: 100%;
+  position: relative;
+
+  .dahboard-manageListings-area {
+    position: absolute;
+    height: 420px;
     bottom: 0px;
     width: 100%;
     .dashboard-infocard-3-container {

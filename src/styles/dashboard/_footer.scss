@@ -1,0 +1,16 @@
+.footer {
+  position: relative;
+  bottom: 0px;
+  background-color: #333333;
+  height: 81px;
+  margin-left: -15px;
+  .copyright-container {
+    line-height: 81px;
+    vertical-align: middle;
+    p {
+      color: #888888;
+      text-align: center;
+    }
+  }
+
+}

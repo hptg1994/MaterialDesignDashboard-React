@@ -8,7 +8,8 @@ class InfoCard extends Component {
     this.icons = [];
     this.height = '';
     this.size = '';
-    this.
+    this.chartType = ''
+    this.photo = ''
   }
 
   componentWillMount(){
@@ -42,14 +43,21 @@ class InfoCard extends Component {
         this.height = '372px';
         this.size = '63px';
         break;
-      case 'analysis-dailysales':
-      case 'analysis-emailsubsciptions':
       case 'analysis-completedtasks':
-        this.height = '262px';
-        this.marginLR = '15px';
-        this.size = '63px';
+        this.chartType = 'dotline';
+        this.height = '262px'; 
         break;
-
+      case 'analysis-dailysales': 
+        this.chartType = 'dotline';
+        this.height = '262px';  
+        break;
+      case 'analysis-emailsubsciptions':
+        this.chartType = 'barchart'
+        this.height = '262px';
+        break;
+      case 'property-manager':
+        this.photo = '#';
+        this.height = '409px';      
       default:
         break;
     }
@@ -58,7 +66,7 @@ class InfoCard extends Component {
     return (
       <div className = 'InfoCard-container' style = {{ height: this.height }}>
         <div className = 'infoCard-TitlePhoto-Container'>
-          <InfoTitleArea icon = {this.icons[0]} size = {this.size} chartType = ''/>
+          <InfoTitleArea icon = {this.icons[0]} size = {this.size} chartType = {this.chartType} photo = {this.photo}/>
         </div>
         <div className = 'infoCard-main' style = {{ height: '71%' }}> 
         </div>

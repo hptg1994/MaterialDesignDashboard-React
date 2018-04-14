@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import InfoCard from "../../components/Cards/DashBoardCard/InfoCard";
 import { Row, Col, Container } from "reactstrap";
+import Footer from './Footer'
 
 class Dashboard extends Component {
   constructor(props) {
@@ -50,6 +51,19 @@ class Dashboard extends Component {
           </div>
         </section>
 
+        <section className = 'dashboard-manageListings-container'>
+          <div className="dahboard-manageListings-area">
+            <div className="dashboard-infocard-3-container">
+              <InfoCard type = 'property-manager' />
+            </div>
+            <div className="dashboard-infocard-3-container">
+              <InfoCard type = 'property-manager' />
+            </div>
+            <div className="dashboard-infocard-3-container">
+              <InfoCard type = 'property-manager' />
+            </div>
+          </div>
+        </section>
       </div>
     );
   };

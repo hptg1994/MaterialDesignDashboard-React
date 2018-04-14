@@ -5,6 +5,10 @@ class InfoTitleArea extends Component {
   constructor(props) {
     super(props);
     this.iconsize = ''
+    this.titleheight = {
+      chartType : '160px',
+      photo: '268px'
+    }
   }
 
   componentWillMount() {
@@ -23,12 +27,22 @@ class InfoTitleArea extends Component {
         break;
     }
   } 
-  
   render() {
+    const style = () => {
+      if(this.props.chartType){
+        return { height: '160px', width:'100%' }
+      } else if(this.props.photo) {
+        return { height: '268px', width:'100%' }
+      } else {
+        return { width:this.props.size, height:this.props.size }
+      }
+    }
+
     return (
-      <div className = 'InfoTitlePhoto-container' style = {this.props.charttype? { marginLeft:'15px', marginRight:'15px' }:{ width:this.props.size, height:this.props.size } } >
+      <div className = 'InfoTitlePhoto-container' style = {style()} >
           {this.props.icon && <i className = 'material-icons' style = {{ fontSize: this.iconsize }}>{this.props.icon}</i> }
-          {this.props.charttype && <ChartGraph type = {this.props.charttype} />}  
+          {this.props.charttype && <ChartGraph type = {this.props.chartType} />}  
+          {this.props.photo && <img src = {this.props.photo}/> }
       </div>
     );
   }
