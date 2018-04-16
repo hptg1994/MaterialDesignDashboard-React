@@ -20,6 +20,7 @@ class Sidebar extends Component {
         <div className="sidebarcontent-container">
           <SidebarContent icon="dashboard" title="Dashboard" />
           <SidebarContent icon="insert_photo" title="Pages" navItems={["Timeline Page", "User Profile", "Login Page", 'Lock Screen Page']}/>
+          <SidebarContent icon="insert_photo" title="Components" navItems={["Buttons", "Grid System", "Panels", 'Sweet Alert']}/>
         </div>
       </div>
     );
