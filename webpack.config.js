@@ -42,9 +42,6 @@ module.exports = (env) => {
             }
           }]
         })
-      },{
-        test:/\.svg$/,
-        use: 'svg-loader'
       }]
     },
     plugins: [CSSExtract],
