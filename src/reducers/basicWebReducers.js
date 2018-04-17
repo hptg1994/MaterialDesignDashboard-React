@@ -1,5 +1,5 @@
 const initialState = {
-  currentPage:''
+  currentPage:'dashboard'
 }
 
 export default (state = initialState, action) => {
@@ -9,5 +9,7 @@ export default (state = initialState, action) => {
         ...state,
         currentPage: action.currentPage
       }
+    default:
+      return state;
   }
 }

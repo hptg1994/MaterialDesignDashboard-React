@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from "react-redux";
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from "reactstrap";
+import { handleCurrentPage } from "../../actions/basicWebActions";
 
 class SidebarContent extends Component {  
   constructor(props) {
@@ -14,6 +16,11 @@ class SidebarContent extends Component {
       collapsed: !this.state.collapsed
     });
   };
+
+  //Change the current Page
+  handleCurrentPage = (currentPage) => {
+    this.props.handlecurrentPage(currentPage);
+  } 
 
   NavItemTitle = (titleString) => {
     let TitleHead = '';
@@ -32,7 +39,7 @@ class SidebarContent extends Component {
     const navItem = this.props.navItems === undefined? <div/> : this.props.navItems.map((item) => {
       const Title = this.NavItemTitle(item);
       return(
-        <NavItem key = {item} >
+        <NavItem key = {item} onClick = {() => this.handleCurrentPage(item)}>
           <NavLink href={`/${item}`} className = 'sidebarcontent-detail' >
             {Title + ' ' +item}
           </NavLink>
@@ -69,4 +76,10 @@ class SidebarContent extends Component {
   } 
 }
 
-export default SidebarContent;
+const mapStateToProps = (state,props) => ({
+  currentPage: state.basicWeb.currentPage
+})
+const mapDispatchToProps = (dispatch,props) => ({
+  handlecurrentPage:(page) => dispatch(handleCurrentPage(page))
+})
+export default connect(mapStateToProps,mapDispatchToProps)(SidebarContent);

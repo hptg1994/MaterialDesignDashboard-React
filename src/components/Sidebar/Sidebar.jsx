@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SidebarContent from "../Buttons/SidebarContent";
+import SidebarContent from "./SidebarContent";
 import UserProfile from '../SidebarItems/UserProfile';
 import HeaderNavbar from '../Header/HeaderNavbar';
 
@@ -26,5 +26,7 @@ class Sidebar extends Component {
     );
   }
 }
+
+
 
 export default Sidebar;
