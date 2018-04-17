@@ -40,7 +40,7 @@ class SidebarContent extends Component {
       const Title = this.NavItemTitle(item);
       return(
         <NavItem key = {item} onClick = {() => this.handleCurrentPage(item)}>
-          <NavLink href={`/${item}`} className = 'sidebarcontent-detail' >
+          <NavLink href={`/${item}`} className = 'sidebarcontent-detail' activeClassName="selected">
             {Title + ' ' +item}
           </NavLink>
         </NavItem>
@@ -62,13 +62,13 @@ class SidebarContent extends Component {
                 <i className="material-icons">arrow_drop_down</i>
               </div>
             }
-              <Collapse isOpen={!this.state.collapsed}>
-            <div className = 'sidebar-collapse-area'>
+            <Collapse isOpen={!this.state.collapsed}>
+              <div className = 'sidebar-collapse-area'>
                 <Nav>
                   { navItem }
                 </Nav>
-            </div>
-              </Collapse>
+              </div>
+            </Collapse>
           </Navbar>
         </div>
       </div>

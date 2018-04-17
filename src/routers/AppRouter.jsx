@@ -10,7 +10,7 @@ const AppRouter = () => (
     <div>
       <Switch>
         <Route path = '/dashboard' exact = {true} component = {MainWebFrame} /> 
-        <Route path = '/Timeline%20Page' component = {MainWebFrame} />
+        <Route path = '/Timeline Page' component = {MainWebFrame} />
         <Redirect path='/index' to = {{ pathname: '/dashboard' }} />
         {/* <Redirect path='/' to = {{ pathname: '/dashboard' }} /> */}
       </Switch>
