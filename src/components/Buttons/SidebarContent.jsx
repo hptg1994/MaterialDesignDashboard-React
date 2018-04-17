@@ -15,39 +15,55 @@ class SidebarContent extends Component {
     });
   };
 
-  NavItemTitle = (title) => {
-    let titleHeader1 = '' 
-    let titleHeader2 = '';
-    const titleArray = title.spilt(' ');
-    titleHeader1 = titleArray[0][0];
-    titleHeader2 = titleArray[1][0];    
+  NavItemTitle = (titleString) => {
+    let TitleHead = '';
+    if(titleString === undefined ||titleString.length === 0 ){
+      return;
+    }
+    let titleArray = titleString.split(' ');
+    titleArray.forEach((title) => {
+      TitleHead += title[0];
+    })
+    return TitleHead;
   }
   
   render() {
 
-    const navItem = this.props.navItems === undefined? <div/> : this.props.navItems.map((item) => (
-      <NavItem key = {item} >
-        <NavLink href={`/${item}`} className = 'sidebarcontent-detail' >
-          {item}
-        </NavLink>
-      </NavItem>
-    ));
+    const navItem = this.props.navItems === undefined? <div/> : this.props.navItems.map((item) => {
+      const Title = this.NavItemTitle(item);
+      return(
+        <NavItem key = {item} >
+          <NavLink href={`/${item}`} className = 'sidebarcontent-detail' >
+            {Title + ' ' +item}
+          </NavLink>
+        </NavItem>
+      )
+    });
   
     return (
        <div className = 'sidebarContent-container'  onClick={this.toggleNavbar} >
-        <Navbar color="faded">
-          <div className = 'sidebar-title-icon-container'>
-            <div className="materialicons-container" >
-              <i className="material-icons">{this.props.icon}</i>
+        <div className="sidebarContent-textarea">
+          <Navbar color="faded">
+            <div className = 'sidebar-title-icon-container'>
+              <div className="materialicons-container" >
+                <i className="material-icons">{this.props.icon}</i>
+              </div>
+              <NavbarBrand className="mr-auto sidebar-title-container ">{this.props.title}</NavbarBrand>
             </div>
-            <NavbarBrand className="mr-auto sidebar-title-container ">{this.props.title}</NavbarBrand>
+            { this.props.navItems &&
+              <div className = 'material-icons-arrowcontainer'>
+                <i className="material-icons">arrow_drop_down</i>
+              </div>
+            }
+              <Collapse isOpen={!this.state.collapsed}>
+            <div className = 'sidebar-collapse-area'>
+                <Nav>
+                  { navItem }
+                </Nav>
             </div>
-          <Collapse isOpen={!this.state.collapsed} navbar>
-            <Nav navbar>
-              { navItem }
-            </Nav>
-          </Collapse>
-        </Navbar>
+              </Collapse>
+          </Navbar>
+        </div>
       </div>
     );
   } 
