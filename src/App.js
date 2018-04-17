@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
+import { Provider } from 'react-redux'
 import AppRouter from './routers/AppRouter'
+import configureStore from './store/store'
+
+
+const store = configureStore();
 
 class App extends Component {
   render() {
     return (
-      <AppRouter />
+      <Provider store = {store}>
+        <AppRouter />
+      </Provider>
     );
   }
 }
