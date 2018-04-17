@@ -9,5 +9,7 @@ export default (state = initialState, action) => {
         ...state,
         currentPage: action.currentPage
       }
+      default:
+        return state;
   }
 }

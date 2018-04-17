@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux'
-import AppRouter from './routers/AppRouter'
 import configureStore from './store/store'
+import MainWebFrame from './components/MainWebFrame/MainWebFrame';
 
 
 const store = configureStore();
@@ -10,7 +10,7 @@ class App extends Component {
   render() {
     return (
       <Provider store = {store}>
-        <AppRouter />
+        <MainWebFrame />
       </Provider>
     );
   }
