@@ -4,19 +4,24 @@ import Dashboard from '../Dashboard/Dashboard';
 import Footer from '../Dashboard/Footer';
 import Sidebar from '../Sidebar/Sidebar';
 import AppRouter from "../../routers/AppRouter";
+import { Router } from 'react-router-dom'
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from "reactstrap";
+import createHistory from 'history/createBrowserHistory'
+export const history = createHistory();
 
 class MainWebFrame extends Component {
   render() {
     return (
-      <div>
-        <Sidebar />
-        <div className = 'main-area'>
-          <HeaderNavbar />
-          <AppRouter />
-          <Footer />
+      <Router history = { history }>
+        <div>
+          <Sidebar />
+          <div className = 'main-area'>
+            <HeaderNavbar />
+            <AppRouter />
+            <Footer />
+          </div>
         </div>
-      </div>
+      </Router>
     );
   }
 }
