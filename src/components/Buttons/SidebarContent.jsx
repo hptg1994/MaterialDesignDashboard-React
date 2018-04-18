@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem,NavLink } from "reactstrap";
-import { Link } from 'react-router-dom'
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from "reactstrap";
+import { NavLink } from 'react-router-dom'
 
 class SidebarContent extends Component {  
   constructor(props) {
