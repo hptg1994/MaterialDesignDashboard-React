@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from "reactstrap";
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from "reactstrap";
+import { NavLink } from 'react-router-dom'
 
 class SidebarContent extends Component {  
   constructor(props) {
@@ -33,7 +34,7 @@ class SidebarContent extends Component {
       const Title = this.NavItemTitle(item);
       return(
         <NavItem key = {item} >
-          <NavLink href={`/${item}`} className = 'sidebarcontent-detail' >
+          <NavLink to={`/${item}`} className = 'sidebarcontent-detail' >
             {Title + ' ' +item}
           </NavLink>
         </NavItem>
