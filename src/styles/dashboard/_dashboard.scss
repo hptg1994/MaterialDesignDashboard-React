@@ -69,7 +69,7 @@
 // Mange Listing 
 
 .dashboard-third-container {
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   height: 440px;
   width: 100%;
   position: relative;
@@ -80,8 +80,10 @@
     bottom: 0px;
     width: 100%;
 
-    .dashboard-third-title {
-
+    .dashboard-third-title h2{
+      font-size: 1.825em;
+      margin-left: 15px;
+      margin-bottom: 65px;
     }
     
     .dashboard-infocard-3-container {

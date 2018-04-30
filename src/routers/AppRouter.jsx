@@ -9,11 +9,11 @@ export const history = createHistory();
 
 const AppRouter = () => (
     <div>
-      <Route path = '/' exact component = {MainWebFrame} />
       <Switch>
         <Route path = '/dashboard' component = {Dashboard} /> 
         <Route path = '/Timeline Page' component = {TimelinePage} /> 
         <Redirect path='/index' to = {{ pathname: '/dashboard' }} />
+        <Redirect path='/' to = {{ pathname: '/dashboard' }} />
       </Switch>
     </div>
 )
