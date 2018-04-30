@@ -18,7 +18,7 @@ class InfoCard_basicInfo extends Component {
 
   handleCardType = (type) => {
     switch (type) {
-      case 'property-manager':
+      case 'Bigger':
         this.photo = '#';
         this.height = '409px';      
       default:

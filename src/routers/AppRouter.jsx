@@ -8,7 +8,7 @@ import TimelinePage from '../components/Dashboard/TimelinePage';
 export const history = createHistory();
 
 const AppRouter = () => (
-    <div>
+    <div className = 'displayContent'>
       {/* <Route path = '/' exact component = {MainWebFrame} /> */}
       <Switch>
         <Route path = '/dashboard' component = {Dashboard} /> 

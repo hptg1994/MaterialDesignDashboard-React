@@ -1,72 +1,42 @@
 .dashboard-container {
-  margin-right: 15px;
-}
+  margin-left: auto;
+  margin-right: auto;
 
-// first row
-.dashboard-firstrow {
-  width: 100%;
-  height: 187px;
-  margin-bottom: 30px;
-  position: relative;
-  .dashboard-infocard-area {
-    position: absolute;
-    bottom: 0px;
-    height: 128px;
-    width: 100%;
-    .dashboard-infocard-4-container {
-      width: 25%;
-      float: left;
-      padding-left: 15px;
-      padding-right: 15px; 
-    }
+  &::before,
+  &::after {
+    display: table;
+    content: " ";
   }
 }
 
+// cardrow 
+.dashboard-cardRow {
+  display: flex;
+  flex-wrap: wrap;
 
-// second row 
-.dashboard-secondrow {
-  width: 100%;
-  height: 392px;
-  margin-bottom: 30px;
-  position: relative;
+  .dashboard-infocard-4-container {
+    max-width: 25%;
+    flex-basis: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 
-  .dashboard-globalsales-area {
-    position: absolute;
-    height: 372px;
-    bottom: 0px;
-    width: 100%;
+  .dashboard-globalsales-container {
+    max-width: 100%;
+    flex-basis: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 
-    .dashboard-globalsales-container {
-      padding-left: 15px;
-      padding-right: 15px; 
-    }
+  .dashboard-infocard-3-container {
+    max-width: 33.33%;
+    flex-basis: 33.33%;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
-// Analysis Data
-
-.dashboard-analysisdata-container {
-  margin-bottom: 30px;
-  height: 282px;
-  width: 100%;
-  position: relative;
-
-  .dashboard-analysisdata-area {
-    position: absolute;
-    height: 262px;
-    bottom: 0px;
-    width: 100%;
-    .dashboard-infocard-3-container {
-      width: 33.3%;
-      height: inherit;
-      float: left;
-      padding-left: 15px;
-      padding-right: 15px; 
-    }
-  }
-}
-
-// Mange Listing 
+// Mange Listing
 
 .dashboard-manageListings-container {
   margin-bottom: 30px;
@@ -84,7 +54,7 @@
       height: inherit;
       float: left;
       padding-left: 15px;
-      padding-right: 15px; 
+      padding-right: 15px;
     }
   }
 }

@@ -4,7 +4,7 @@ import ButtonsImg from '../Buttons/ButtonsImg'
 class HeaderNavbar extends Component {
   render() {
     return (
-      <div className = 'header-navbar-container'>
+      <header className = 'header-navbar-container'>
         <div className="header-leftside">
           <div className ='header-expandsidebar-container'>
             <ButtonsImg type = 'toggleExpandSidebar' />
@@ -30,7 +30,7 @@ class HeaderNavbar extends Component {
             <input className = 'header-searching' type = 'search' placeholder = 'Search'/> 
           </div>
         </div>
-      </div>
+      </header>
     );
   }
 }

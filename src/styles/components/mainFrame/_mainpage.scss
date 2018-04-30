@@ -1,5 +1,9 @@
 .main-area {
-  width: calc(100% - 275px);
-  position: absolute;
-  right: 0px;
+  width: calc(100% - 260px);
+  float: right;
+  overflow: hidden;
+  .displayContent {
+    overflow: scroll;
+    padding: 30px 15px;
+  }
 }
