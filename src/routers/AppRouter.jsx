@@ -9,7 +9,7 @@ export const history = createHistory();
 
 const AppRouter = () => (
     <div>
-      {/* <Route path = '/' exact component = {MainWebFrame} /> */}
+      <Route path = '/' exact component = {MainWebFrame} />
       <Switch>
         <Route path = '/dashboard' component = {Dashboard} /> 
         <Route path = '/Timeline Page' component = {TimelinePage} /> 

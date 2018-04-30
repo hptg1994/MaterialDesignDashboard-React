@@ -68,17 +68,22 @@
 
 // Mange Listing 
 
-.dashboard-manageListings-container {
+.dashboard-third-container {
   margin-bottom: 30px;
   height: 440px;
   width: 100%;
   position: relative;
 
-  .dahboard-manageListings-area {
+  .dahboard-third-area {
     position: absolute;
     height: 420px;
     bottom: 0px;
     width: 100%;
+
+    .dashboard-third-title {
+
+    }
+    
     .dashboard-infocard-3-container {
       width: 33.3%;
       height: inherit;

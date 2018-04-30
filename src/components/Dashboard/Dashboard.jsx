@@ -53,9 +53,12 @@ class Dashboard extends Component {
             </div>
           </div>
         </section>
-
-        <section className = 'dashboard-manageListings-container'>
-          <div className="dahboard-manageListings-area">
+      
+        <section className = 'dashboard-third-container'>
+          <div className="dahboard-third-area">
+            <div className="dashboard-third-title"> 
+              <h2>News</h2>
+            </div>
             <div className="dashboard-infocard-3-container">
               <InfoCard_photo type = 'property-manager' />
             </div>
