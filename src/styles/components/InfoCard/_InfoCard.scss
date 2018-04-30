@@ -28,7 +28,6 @@
       bottom: 0px;
       height: 1px;
     }
-    // border-bottom: 1px solid $text-light-grey;
   }
 }
 
@@ -41,5 +40,19 @@
   }
   .InfoCard-container {
     margin-bottom: 50px;
+  }
+}
+
+// Animation 
+.graphycard, .photocard {
+  .infoCard-TitlePhoto-Container {
+    transform: translate3d(0,0,0);
+    transition: $transitAnimation;
+  }
+
+  &:hover {
+    .infoCard-TitlePhoto-Container { 
+      transform: translate3d(0,-50px,0)
+    }
   }
 }

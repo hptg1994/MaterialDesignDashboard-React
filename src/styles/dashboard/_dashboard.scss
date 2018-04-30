@@ -36,25 +36,15 @@
   }
 }
 
-// Mange Listing
 
-.dashboard-manageListings-container {
-  margin-bottom: 30px;
-  height: 440px;
-  width: 100%;
-  position: relative;
 
-  .dahboard-manageListings-area {
-    position: absolute;
-    height: 420px;
-    bottom: 0px;
-    width: 100%;
-    .dashboard-infocard-3-container {
-      width: 33.3%;
-      height: inherit;
-      float: left;
-      padding-left: 15px;
-      padding-right: 15px;
-    }
+.newsarea {
+  h3 {
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    font-weight: 300;
+    line-height: 1.5em;
+    font-size: 1.825em;
+    margin: 20px 15px 10px;
+    -webkit-font-smoothing: antialiased;
   }
 }

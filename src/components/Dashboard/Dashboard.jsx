@@ -46,18 +46,21 @@ class Dashboard extends Component {
             <InfoCard_GraphyAnalysis type = 'analysis-completedtasks' />
           </div>
         </section>
-
-        <section className = 'dashboard-cardRow'>
-          <div className="dashboard-infocard-3-container">
-            <InfoCard_photo type = 'Bigger' />
-          </div>
-          <div className="dashboard-infocard-3-container">
-            <InfoCard_photo type = 'Bigger' />
-          </div>
-          <div className="dashboard-infocard-3-container">
-            <InfoCard_photo type = 'Bigger' />
-          </div> 
-        </section>
+        
+        <div className="newsarea">
+          <h3>News</h3>
+          <section className = 'dashboard-cardRow'>
+            <div className="dashboard-infocard-3-container">
+              <InfoCard_photo type = 'Bigger' />
+            </div>
+            <div className="dashboard-infocard-3-container">
+              <InfoCard_photo type = 'Bigger' />
+            </div>
+            <div className="dashboard-infocard-3-container">
+              <InfoCard_photo type = 'Bigger' />
+            </div> 
+          </section>
+        </div>
       </section>
     );
   }
