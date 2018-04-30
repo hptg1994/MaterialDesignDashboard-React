@@ -27,7 +27,7 @@ class InfoCard_basicInfo extends Component {
   }
   render() {
     return (
-      <div className = 'InfoCard-container' style = {{ height: this.height }}>
+      <div className = 'InfoCard-container photocard' style = {{ height: this.height }}>
         <div className = 'infoCard-TitlePhoto-Container'>
           <InfoTitleArea icon = {this.icons[0]} size = {this.size} chartType = {this.chartType} photo = {this.photo}/>
         </div>
