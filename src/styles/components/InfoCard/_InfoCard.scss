@@ -3,6 +3,12 @@
   box-shadow: $Infocard-shadow;
   border-radius: $infocard-radius;
   position: relative;
+  width: 100%;
+  color: rgba(0, 0, 0, 0.87);
+  margin: 25px 0;
+  display: inline-block;
+  position: relative;
+  background: #fff;
 
   .infoCard-TitlePhoto-Container {
     position: absolute;
