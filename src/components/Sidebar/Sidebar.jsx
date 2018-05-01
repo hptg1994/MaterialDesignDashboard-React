@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom'
 import SidebarContent from "../Buttons/SidebarContent";
 import UserProfile from '../SidebarItems/UserProfile';
 import HeaderNavbar from '../Header/HeaderNavbar';
@@ -18,7 +19,9 @@ class Sidebar extends Component {
         </div>
         <UserProfile />
         <div className="sidebarcontent-container">
-          <SidebarContent icon="dashboard" title="Dashboard" />
+          <NavLink to={`/dashboard`} className = 'sidebarcontent-detail' activeClassName="selected">
+            <SidebarContent icon="dashboard" title="Dashboard" />
+          </NavLink>
           <SidebarContent icon="insert_photo" title="Pages" navItems={["Timeline Page", "User Profile", "Login Page", 'Lock Screen Page']}/>
           <SidebarContent icon="insert_photo" title="Components" navItems={["Buttons", "Grid System", "Panels", 'Sweet Alert']}/>
         </div>

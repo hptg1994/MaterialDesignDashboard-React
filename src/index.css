@@ -1,28 +1,24 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif !important;
+  font-family: "Roboto", sans-serif !important;
   -webkit-font-smoothing: antialiased;
 }
 
 html {
-  font-family: 'Roboto', sans-serif !important;
+  font-family: "Roboto", sans-serif !important;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -webkit-box-sizing: border-box;
   font-weight: 100 !important;
 }
 
-html,body {
-  height:100%;
+html,
+body {
+  height: 100%;
   width: 100%;
-  background-color: #EEEEEE !important;
+  background-color: #eeeeee !important;
 }
-
-p {
-  margin-bottom: 0px;
-}
-
 
 button {
   outline: none;
@@ -30,4 +26,18 @@ button {
 
 * {
   outline: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
 }
