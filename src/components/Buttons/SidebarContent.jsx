@@ -22,7 +22,7 @@ class SidebarContent extends Component {
 
   toggleNavbar = () => {
     this.setState({
-      collapsed: false
+      collapsed: !this.state.collapsed
     });
   };
 
@@ -39,7 +39,7 @@ class SidebarContent extends Component {
   }
   
   render() {
-
+    console.log(this.state.collapsed);
     const navItem = this.props.navItems === undefined? <div/> : this.props.navItems.map((item) => {
       const Title = this.NavItemTitle(item);
       return(
@@ -52,10 +52,10 @@ class SidebarContent extends Component {
     });
   
     return (
-       <div className = 'sidebarContent-container'  onClick={this.toggleNavbar} >
+       <div className = 'sidebarContent-container'>
         <div className="sidebarContent-textarea">
           <Navbar color="faded">
-            <div className = 'sidebar-menu'>
+            <div className = 'sidebar-menu' onClick={this.toggleNavbar} >
               <div className = 'sidebar-title-icon-container'>
                 <div className="materialicons-container" >
                   <i className="material-icons">{this.props.icon}</i>
