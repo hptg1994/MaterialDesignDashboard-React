@@ -8,11 +8,21 @@ class SidebarContent extends Component {
     this.state = {
       collapsed: true
     };
+
+    this.info = {
+      'Dashboard':{
+        url:'dashboard'
+      },
+      'Page':{
+        
+      }
+
+    }
   }
 
   toggleNavbar = () => {
     this.setState({
-      collapsed: !this.state.collapsed
+      collapsed: false
     });
   };
 
@@ -34,8 +44,8 @@ class SidebarContent extends Component {
       const Title = this.NavItemTitle(item);
       return(
         <NavItem key = {item} >
-          <NavLink to={`/${item}`} className = 'sidebarcontent-detail' >
-            {Title + ' ' +item}
+          <NavLink to={`/${item}`} className = 'sidebarcontent-detail' activeClassName="menudetail-selected" >
+            {Title + " "}<span>{item}</span>
           </NavLink>
         </NavItem>
       )
@@ -45,24 +55,26 @@ class SidebarContent extends Component {
        <div className = 'sidebarContent-container'  onClick={this.toggleNavbar} >
         <div className="sidebarContent-textarea">
           <Navbar color="faded">
-            <div className = 'sidebar-title-icon-container'>
-              <div className="materialicons-container" >
-                <i className="material-icons">{this.props.icon}</i>
+            <div className = 'sidebar-menu'>
+              <div className = 'sidebar-title-icon-container'>
+                <div className="materialicons-container" >
+                  <i className="material-icons">{this.props.icon}</i>
+                </div>
+                <NavbarBrand className="mr-auto sidebar-title-container ">{this.props.title}</NavbarBrand>
               </div>
-              <NavbarBrand className="mr-auto sidebar-title-container ">{this.props.title}</NavbarBrand>
+              { this.props.navItems &&
+                <div className = 'material-icons-arrowcontainer'>
+                  <i className="material-icons">arrow_drop_down</i>
+                </div>
+              }
             </div>
-            { this.props.navItems &&
-              <div className = 'material-icons-arrowcontainer'>
-                <i className="material-icons">arrow_drop_down</i>
-              </div>
-            }
-              <Collapse isOpen={!this.state.collapsed}>
-            <div className = 'sidebar-collapse-area'>
+            <Collapse isOpen={!this.state.collapsed}>
+              <div className = 'sidebar-collapse-area'>
                 <Nav>
                   { navItem }
                 </Nav>
-            </div>
-              </Collapse>
+              </div>
+            </Collapse>
           </Navbar>
         </div>
       </div>
