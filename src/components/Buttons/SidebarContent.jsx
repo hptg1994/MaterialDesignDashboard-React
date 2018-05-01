@@ -39,11 +39,10 @@ class SidebarContent extends Component {
   }
   
   render() {
-    console.log(this.state.collapsed);
     const navItem = this.props.navItems === undefined? <div/> : this.props.navItems.map((item) => {
       const Title = this.NavItemTitle(item);
       return(
-        <NavItem key = {item} >
+        <NavItem key = {item}>
           <NavLink to={`/${item}`} className = 'sidebarcontent-detail' activeClassName="menudetail-selected" >
             {Title + " "}<span>{item}</span>
           </NavLink>
@@ -64,7 +63,7 @@ class SidebarContent extends Component {
               </div>
               { this.props.navItems &&
                 <div className = 'material-icons-arrowcontainer'>
-                  <i className="material-icons">arrow_drop_down</i>
+                  {this.state.collapsed? <i className="material-icons">arrow_drop_up</i>:<i className="material-icons">arrow_drop_down</i>}
                 </div>
               }
             </div>
