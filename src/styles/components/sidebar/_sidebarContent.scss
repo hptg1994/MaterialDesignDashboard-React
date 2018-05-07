@@ -111,4 +111,5 @@ a:hover {
 .selected nav, .menudetail-selected {
   background-color: $menu-chosen !important;
   box-shadow: $menu-shadow !important;
+  border-radius: 4px;
 }
