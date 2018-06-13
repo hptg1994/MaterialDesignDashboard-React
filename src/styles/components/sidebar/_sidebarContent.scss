@@ -22,6 +22,9 @@
       border-radius: 4px;
       width: 100%;
       padding: 10px 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       transition: all 300ms linear;
       &:hover {
         background-color: $menu-hover;
@@ -29,10 +32,8 @@
     }
 
     .material-icons-arrowcontainer {
-      float: right;
       overflow: hidden;
-      width: 17px;
-      line-height: 2;
+      display: contents;
       i {
         font-size: 17px;
         color: white;
@@ -46,8 +47,7 @@
   display: inline-flex;
   color: white;
 
-  .materialicons-container {
-    float: left;
+  .materialicons-container { 
     overflow: hidden;
     margin: auto auto;
     height: 24px;
@@ -56,7 +56,6 @@
   }
 
   .sidebar-title-container {
-    float: left;
     overflow: hidden;
     margin: auto auto;
     font-size: 14px;
